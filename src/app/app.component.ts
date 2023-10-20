@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,12 @@ export class AppComponent {
   title = 'api';
 
   alert(){
-    alert("Eba funcionou")
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Item salvo com sucesso!!!',
+      showConfirmButton: false,
+      timer: 1000
+    })
   }
 }
